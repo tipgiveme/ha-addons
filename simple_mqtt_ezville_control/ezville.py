@@ -334,6 +334,8 @@ def ezville_loop(config):
                 if topics[0] == HA_TOPIC and topics[-1] == 'command':
                     await HA_process(topics, msg.payload.decode('utf-8'))
                 elif topics[0] == EW11_TOPIC and topics[-1] == 'recv':
+                    print(f"EW11 message received! Payload: {msg.payload}")
+                    
                     # Que에서 확인된 시간 기준으로 EW11 Health Check함.
                     last_received_time = time.time()
 
