@@ -289,6 +289,8 @@ def ezville_loop(config):
         nonlocal MSG_QUEUE
         nonlocal MQTT_ONLINE
         nonlocal startup_delay
+
+        log('INFO {}'.format(msg.topic))
         
         if msg.topic == 'homeassistant/status':
             # Reboot Control 사용 시 MQTT Integration의 Birth/Last Will Testament Topic은 바로 처리
