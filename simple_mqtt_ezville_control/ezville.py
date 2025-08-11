@@ -280,7 +280,7 @@ def ezville_loop(config):
                        3: 'Connection refused - server unavailable',
                        4: 'Connection refused - bad username or password',
                        5: 'Connection refused - not authorised'}
-            log(errcode[rc])
+            log(errcode[rc.value])
          
         
     # MQTT 메시지 Callback
