@@ -262,7 +262,7 @@ def ezville_loop(config):
   
 
     # MQTT 통신 연결 Callback
-    def on_connect(client, userdata, flags, rc):
+    def on_connect(client, userdata, flags, rc, properties):
         if rc == 0:
             log('[INFO] MQTT Broker 연결 성공')
             # Socket인 경우 MQTT 장치의 명령 관련과 MQTT Status (Birth/Last Will Testament) Topic만 구독
